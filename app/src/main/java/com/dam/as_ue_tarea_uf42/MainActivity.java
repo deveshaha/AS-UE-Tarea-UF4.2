@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.util.Size;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +14,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button btnChangeTxtSize;
-    int tam = 24;
+    static int TAM = 24;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,4 +61,9 @@ public class MainActivity extends AppCompatActivity {
         TextView tvText = findViewById(R.id.tvHelloWorld);
         tvText.setTextSize(txtSize);
     }
+
+    public void changeTextSize(int txtSize){
+        //TODO: Change text size to make it dynamic
+    }
+
 }

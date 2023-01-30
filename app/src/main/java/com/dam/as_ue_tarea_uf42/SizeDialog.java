@@ -50,6 +50,7 @@ public class SizeDialog extends DialogFragment {
                         } else {
                             alertDialog.dismiss();
                             //TODO: Send the size to the activity
+                            MainActivity.TAM = txtSize;
                         }
                     }
                 });
