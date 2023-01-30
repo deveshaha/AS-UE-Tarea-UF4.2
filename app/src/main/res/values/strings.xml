@@ -10,4 +10,6 @@
     <string name="mn_Exit">Exit</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_java">public class HelloWorld {\n\tpublic static void main(String args[])  {\n\t\tSystem.out.println(\"Hello World!\");\n\t}\n}</string>
+    <string name="tv_python">#!/usr/bin/env python\n# -*- coding: utf-8 -*-\nprint(\"Hello World!\")</string>
 </resources>

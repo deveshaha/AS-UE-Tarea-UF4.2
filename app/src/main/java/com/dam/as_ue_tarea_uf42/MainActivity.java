@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onAceptarDatosListener(int txtSize) {
-        TextView tvText = findViewById(R.id.tvText);
+        TextView tvText = findViewById(R.id.tvHelloWorld);
         tvText.setTextSize(txtSize);
     }
 }
