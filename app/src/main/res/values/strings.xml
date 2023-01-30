@@ -3,4 +3,11 @@
     <string name="btn_change_size">Change text size</string>
     <string name="tv_size">Hello World!</string>
     <string name="et_size">Enter Size</string>
+    <string name="tv_hello_world">Hello World!</string>
+    <string name="mn_verde">Java</string>
+    <string name="mn_java">Java</string>
+    <string name="mn_python">Python</string>
+    <string name="mn_Exit">Exit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
