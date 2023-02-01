@@ -1,6 +1,7 @@
 package com.dam.as_ue_tarea_uf42;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -46,7 +47,11 @@ public class MainActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.menuPython){
             loadFragment(new PythonFragment());
         } else if (item.getItemId() == R.id.menuExit){
-            finish();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("¿Estás seguro que deseas salir de la aplicación?")
+                    .setPositiveButton("Sí", (dialogInterface, i) -> finish())
+                    .setNegativeButton("No", (dialogInterface, i) -> dialogInterface.dismiss())
+                    .show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -62,8 +67,5 @@ public class MainActivity extends AppCompatActivity {
         tvText.setTextSize(txtSize);
     }
 
-    public void changeTextSize(int txtSize){
-        //TODO: Change text size to make it dynamic
-    }
 
 }

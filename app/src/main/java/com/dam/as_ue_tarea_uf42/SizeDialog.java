@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class SizeDialog extends DialogFragment {
 
     EditText etSize;
@@ -44,14 +46,18 @@ public class SizeDialog extends DialogFragment {
                 btn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        int txtSize = Integer.parseInt(etSize.getText().toString());
-                        if (txtSize < 0) {
-                            etSize.setError("The size must be greater than 0");
+                        if (etSize.getText().toString().isEmpty()){
+                            Snackbar.make(view, "El tamaño no puede estar vacío", Snackbar.LENGTH_SHORT).show();
                         } else {
-                            alertDialog.dismiss();
-                            //TODO: Send the size to the activity
-                            MainActivity.TAM = txtSize;
+                            int txtSize = Integer.parseInt(etSize.getText().toString());
+                            if (txtSize < 0) {
+                                Snackbar.make(view, "El tamaño debe ser mayor que 0", Snackbar.LENGTH_SHORT).show();
+                            } else {
+                                alertDialog.dismiss();
+                                MainActivity.TAM = txtSize;
+                            }
                         }
+
                     }
                 });
             }
